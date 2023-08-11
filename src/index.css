@@ -1,13 +1,100 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* body{
+  
+} */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gray;
+  height: 10vh;
+  margin: 0 18.49rem;
+}
+
+main{
+  /* width: 696vw; */
+  /* height: 100vh; */
+  border: 1px solid gray;
+  
+}
+
+.hero-container{
+  height: 50.88vh;
+  border: 1px solid gray;
+  background-color: rgb(73,94,87);
+}
+
+.hero-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 45.34vh;
+  margin: 0 18.49rem;
+  border: 1px solid gray;
+}
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  height: 36.78vh;
+  width: 33.25vw;
+}
+
+.image-container{
+  border: 1px solid gray;
+  height: 36.11vh;
+  width: 31.25vw;
+}
+
+.highlights-content{
+  /* width: 71.5vw; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 61.66vh;
+  border: 1px solid gray;
+  margin: 5rem 18.49rem;
+ 
+}
+
+.card-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 48.77vh;
+  border: 1px solid gray;
+}
+
+.card{
+  border: 1px solid gray;
+  width: 20.56rem;
+  border-radius: 16px 16px 0 0;
+}
+
+.testimonials{
+  height: 65.56vh;
+  background-color: rgb(217,217,217);
+}
+
+.about{
+  height: 63.33vh;
+  border: 1px solid gray;
+}
+
+
+
+footer{
+  display: flex;
+  justify-content: space-around;
+  height: 46.33vh;
+  border: 1px solid gray;
+  background-color: aqua;
 }
