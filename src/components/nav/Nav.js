@@ -3,7 +3,7 @@ import React from 'react'
 function Nav({ home, about, menu, reservations, orderOnline, login  }) {
   return (
     <nav>
-      <ul>
+      <ul className='list'>
         <li> <a href="home">{home}</a></li>
         <li> <a href="about"> {about} </a></li>
         <li> <a href="menu"> {menu} </a></li>
