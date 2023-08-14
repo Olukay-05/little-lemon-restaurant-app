@@ -5,7 +5,10 @@ import logo from "../../assets/logos/little-lemon.svg"
 function Header() {
   return (
     <header>
-      <img src={logo} alt="logo" />
+      <div>
+        <img src={logo} alt="logo" />
+      </div>
+      
       <Nav 
         home="Home"
         about="About"

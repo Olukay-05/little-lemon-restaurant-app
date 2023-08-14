@@ -10,48 +10,128 @@
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   height: 10vh;
-  margin: 0 18.49rem;
+  padding: 0 5rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.29);
+}
+
+header div{
+  width: 15rem;
+}
+
+header div img{
+  width: 100%;
+  height: auto;
+  margin: 0 1rem;
+}
+
+.list{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+li{
+  margin: 0 1.5rem;
+  
+}
+
+/* ul{
+  list-style: none;
+} */
+
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
 }
 
 main{
   /* width: 696vw; */
   /* height: 100vh; */
-  border: 1px solid gray;
+  /* margin-top: 6.5rem; */
+  /* border: 1px solid gray; */
   
 }
 
 .hero-container{
-  height: 50.88vh;
+  /* height: 52.88vh; */
   border: 1px solid gray;
   background-color: rgb(73,94,87);
 }
 
 .hero-content{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   height: 45.34vh;
-  margin: 0 18.49rem;
-  border: 1px solid gray;
+  margin: 2rem 18.49rem;
+  /* border: 1px solid gray; */
 }
 
 .text-container{
   display: flex;
   flex-direction: column;
-  border: 1px solid gray;
-  height: 36.78vh;
-  width: 33.25vw;
+  justify-content: space-between;
+  /* border: 1px solid gray; */
+  height: 40.78vh;
+  width: 30.25vw;
+  font-family: 'Markazi Text', serif;
+  /* margin: 2rem 1rem; */
+}
+
+.text-container h1{
+  font-size: 5rem;
+  color: rgb(244,206,20);
+}
+
+.text-container h3{
+  color: white;
+  font-size: 3.5rem;
+  line-height: 1rem;
+}
+
+.hero-text{
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Karla', sans-serif;
+}
+
+button{
+  width: 12.5rem;
+  height: 3.75rem;
+  border: none;
+  border-radius: 16px;
+  background-color: rgb(244,206,20);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.29);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .image-container{
-  border: 1px solid gray;
-  height: 36.11vh;
+  /* border: 1px solid gray; */
+  height: 50.11vh;
   width: 31.25vw;
+  /* margin-top: -7rem; */
+}
+
+
+
+.image-container img{
+  width: 100%;
+  height: 110%;
 }
 
 .highlights-content{
@@ -59,42 +139,234 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 61.66vh;
-  border: 1px solid gray;
-  margin: 5rem 18.49rem;
- 
+  height: 58.66vh;
+  /* border: 1px solid gray; */
+  margin: 8rem 18.49rem;
+
 }
+
+.heading{
+  /* border: 1px solid gray; */
+  display: grid;
+  grid-template-columns: 5.2fr 1fr;
+  /* background-color: aquamarine; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading h3{
+  font-family: 'Markazi Text', serif;
+  font-size: 60px;
+  font-weight: normal;
+}
+
+/* .heading button{
+  justify-content: end;
+} */
 
 .card-container{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 48.77vh;
-  border: 1px solid gray;
+  height: 50.77vh;
+  margin-top: 4rem;
+  /* border: 1px solid gray; */
 }
 
 .card{
-  border: 1px solid gray;
-  width: 20.56rem;
+  /* border: 1px solid gray; */
+  /* width: 20.56rem; */
+  width: 16.56rem;
   border-radius: 16px 16px 0 0;
+  background-color: rgb(237,239,238);
+}
+
+.image-card{
+  height: 11.68rem;
+  /* border: 1px solid gray; */
+  border-radius: 16px 16px 0 0;
+  width: 16.56rem;
+}
+
+.image-card img{
+  width: 100%;
+  height: 100%;
+  border-radius: 16px 16px 0 0;
+}
+
+.img{
+  object-fit: cover;
+}
+
+.card-title{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 1.1rem;
+  font-family: 'Markazi Text', serif;
+  font-size: 1.3rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.card-title p{
+  color: rgb(238,153,114);
+}
+
+.card-paragraph{
+  padding: 0 1.2rem;
+  font-family: 'Karla', sans-serif;
+  line-height: 1.5rem;
+  font-size: 17px;
+  height: 10rem;
+  /* border: 1px solid gray; */
+}
+
+.order-delivery{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  padding: 1rem 1rem 1.5rem 1.1rem;
+  align-items: center;
+  font-weight: bold;
+}
+
+.order-delivery div{
+  /* border: 1px solid gray; */
+  height: 25px;
+  width: 30px;
+}
+
+.order-delivery p{
+  font-family: 'Karla', sans-serif;
+}
+
+.order-delivery div img{
+  width: 100%;
+  height: 100%;
 }
 
 .testimonials{
   height: 65.56vh;
   background-color: rgb(217,217,217);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials h4{
+  font-size: 2.25rem;
+  font-family: 'Markazi Text', serif;
+  font-weight: normal;
+  padding-bottom: 4.5rem;
+}
+
+.testimonial-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid gray;
+  background-color: beige; */
+  /* height: 30vh;
+  width: 90vw; */
+}
+
+.rating-cards{
+  height: 10.94rem;
+  width: 12.5rem;
+  margin: 0  4.7rem 4.7rem 4.7rem;
+  background-color: white;
+  border: 1px solid gray;
+  /* flex: 1; */
 }
 
 .about{
   height: 63.33vh;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
 }
 
+.content{
+  /* border: 1px solid gray; */
+  display: flex;
+  justify-content: space-between;
+}
 
+.content h1{
+  color: rgb(73,94,87);
+  /* border: 1px solid gray; */
+}
+
+span{
+  color: rgb(238,153,114);
+}
+
+.color{
+  color: rgb(73,94,87);
+  /* border: 1px solid gray; */
+  padding-top: 2rem 2rem;
+  margin-top: 2rem;
+}
+
+/* .image-container{
+  border: 1px solid gray;
+  
+} */
+
+.about-image{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+
+.about-image div{
+  border: 1px solid gray;
+  
+}
 
 footer{
   display: flex;
   justify-content: space-around;
+  align-items: center;
   height: 46.33vh;
+  /* border: 1px solid gray; */
+  background-color: rgb(251,218,187);
+  padding: 0 14.2rem;
+}
+
+.footer-nav{
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid gray; */
+}
+
+.footer-nav h2{
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  /* border: 1px solid gray; */
+  
+  width: 8rem;
+}
+
+.side-margin{
+  list-style: none;
+}
+
+.footer-nav ul{
+  display: flex;
+  flex-direction: column;
+  margin-left: -15px;
+}
+
+.two{
+  margin-top: -6rem;
+}
+
+.three{
+  margin-top: -4.7rem;
+}
+
+footer div{
   border: 1px solid gray;
-  background-color: aqua;
+  height: 17.44rem;
+  width: 10.13rem;
 }
