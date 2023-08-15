@@ -1,16 +1,16 @@
-
+import React from 'react';
+import { Routes, Route } from 'react-router-dom'; // Import Routes and Route from react-router-dom
 import './App.css';
-import Header from './components/header/Header';
-import Main from './components/main/Main';
-import Footer from './components/footer/Footer';
+
+import HomePage from './components/homepage/Homepage';
+import BookingPage from './components/bookingPage/BookingPage';
 
 function App() {
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} /> {/* Use element prop */}
+      <Route path="/booking" element={<BookingPage />} /> {/* Use element prop */}
+    </Routes>
   );
 }
 

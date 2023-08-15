@@ -2,8 +2,8 @@ import React from 'react'
 
 function Chicago() {
   return (
-    <div>
-      <section className="about">
+    <div id="specials">
+      <section className="about" >
         <article className="hero-content">
             <div className="text-container content">
               <div>
