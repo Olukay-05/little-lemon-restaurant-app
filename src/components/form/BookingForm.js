@@ -31,7 +31,7 @@ function BookingForm() {
 
   return (
     
-    <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
+    <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={ handleSubmit } >
       <label htmlFor="res-date">Choose date</label>
       <input type="date" id="res-date" value={ date } onChange={ handleDateChange } />
       <label htmlFor="res-time">Choose time</label>
@@ -48,7 +48,7 @@ function BookingForm() {
         <option>Birthday</option>
         <option>Anniversary</option>
       </select>
-      
+
       <input type="submit" value="Make Your reservation" />
     </form>  
   )
