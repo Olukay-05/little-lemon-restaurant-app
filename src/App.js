@@ -2,8 +2,8 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom'; // Import Routes and Route from react-router-dom
 import './App.css';
 
-import HomePage from './components/homepage/Homepage';
-import BookingPage from './components/bookingPage/BookingPage';
+import HomePage from './pages/homepage/Homepage';
+import BookingPage from './pages/bookingPage/BookingPage';
 
 function App() {
   return (
