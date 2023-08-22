@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import bruschetta from '../../assets/images/bruschetta.svg'
+import bruchetta from '../../assets/images/bruchetta.svg'
 
 function CallToAction() {
   const navigate = useNavigate();
@@ -23,13 +23,17 @@ function CallToAction() {
               in a lively but casual environment. The restaurant features
               a locally-sourced menu with daily specials.
             </div>
-            <button onClick={handleReserveClick}>
+            <button 
+              className="cta-button"
+              onClick={handleReserveClick}
+              aria-label="Reserve a table at Little Lemon Bistro"
+            >
               Reserve a table
             </button>
           </div>
 
           <div className='image-container'>
-            <img src={bruschetta} alt="bruschetta" />
+            <img src={bruchetta} alt="Bruschetta" />
           </div>
         </article>
       </section>

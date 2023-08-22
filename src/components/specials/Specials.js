@@ -13,13 +13,18 @@ export default function Specials() {
           <article className="highlights-content">
             <div className="heading">
               <h3>This weekly specials!</h3>
-              <button>Online Menu</button>
+              <button 
+                className="cta-button"
+                aria-label="View Online Menu"
+              >
+                Online Menu
+              </button>
             </div>
 
             <div className="card-container">
               <div className="card">
                 <div className="image-card">
-                  <img src={greekSalad} alt="greek salad" />
+                  <img src={greekSalad} alt="Greek salad" />
                 </div>
                 <div className="card-text">
                   <div className="card-title">
@@ -39,7 +44,7 @@ export default function Specials() {
                   <div className='order-delivery'>
                     <p>Order a delivery</p>
                     <div>
-                      <img src={deliveryIcon} alt="delivery" />
+                      <img src={deliveryIcon} alt="Delivery" />
                     </div>
                   </div>
                 </div>
@@ -47,7 +52,7 @@ export default function Specials() {
 
               <div className="card">
               <div className="image-card">
-                  <img className='img' src={bruschettas} alt="bruschettas" />
+                  <img className='img' src={bruschettas} alt="Bruschettas" />
                 </div>
                 <div className="card-text">
                   <div className="card-title">
@@ -66,7 +71,7 @@ export default function Specials() {
                   <div className='order-delivery'>
                     <p>Order a delivery</p>
                     <div>
-                      <img src={deliveryIcon} alt="delivery" />
+                      <img src={deliveryIcon} alt="Delivery" />
                     </div>
                   </div>
                 </div>
@@ -74,7 +79,7 @@ export default function Specials() {
 
               <div className="card">
                 <div className="image-card">
-                  <img src={lemmonDessert} alt="greek salad" />
+                  <img src={lemmonDessert} alt="Lemmon dessert" />
                 </div>
                 <div className="card-text">
                   <div className="card-title">
@@ -96,7 +101,7 @@ export default function Specials() {
                   <div className='order-delivery'>
                     <p>Order a delivery</p>
                     <div>
-                      <img src={deliveryIcon} alt="delivery" />
+                      <img src={deliveryIcon} alt="Delivery" />
                     </div>
                   </div>
                 </div>
@@ -104,7 +109,7 @@ export default function Specials() {
 
               <div className="card">
                 <div className="image-card">
-                    <img src={slicedToast} alt="greek salad" />
+                    <img src={slicedToast} alt="Sliced toast" />
                   </div>
                   <div className="card-text">
                     <div className="card-title">
@@ -123,7 +128,7 @@ export default function Specials() {
                     <div className='order-delivery'>
                       <p>Order a delivery</p>
                       <div>
-                        <img src={deliveryIcon} alt="delivery" />
+                        <img src={deliveryIcon} alt="Delivery" />
                       </div>
                     </div>
                   </div>
