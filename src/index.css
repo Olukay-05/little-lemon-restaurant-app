@@ -108,7 +108,7 @@ main{
   font-family: 'Karla', sans-serif;
 }
 
-button{
+.cta-button{
   width: 12.5rem;
   height: 3.75rem;
   border: none;
@@ -118,6 +118,10 @@ button{
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.cta-button:focus{
+  outline: 2px solid rgb(51,51,51);
 }
 
 .image-container{
