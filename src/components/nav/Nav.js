@@ -8,7 +8,7 @@ function Nav({ home, about, menu, reservations, orderOnline, login }) {
         <li><Link to="/home">{home}</Link></li>
         <li><Link to="/about">{about}</Link></li>
         <li><Link to="/menu">{menu}</Link></li>
-        <li><Link to="/reservations">{reservations}</Link></li>
+        <li><Link to="/booking">{reservations}</Link></li>
         <li><Link to="#specials">{orderOnline}</Link></li>
         <li><Link to="/login">{login}</Link></li>
       </ul>
