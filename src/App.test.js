@@ -1,31 +1,31 @@
-// import { render, screen, fireEvent } from "@testing-library/react";
-// import BookingForm from './components/form/BookingForm';
-// import userEvent from '@testing-library/user-event';
-// import { BrowserRouter } from 'react-router-dom';
-// import App from './App'
+import { render, screen, fireEvent } from "@testing-library/react";
+import BookingForm from './components/form/BookingForm';
+import userEvent from '@testing-library/user-event';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App'
 
-// test('Renders the BookingForm heading', () => {
-//   render(<BrowserRouter><App /></BrowserRouter>);
-//   // render(<BookingForm />);
-//   const headingElement = screen.getByText("Book Now");
-//   expect(headingElement).toBeInTheDocument();
+test('Renders the BookingForm heading', () => {
+  render(<BrowserRouter><App /></BrowserRouter>);
+  // render(<BookingForm />);
+  const headingElement = screen.getByText("Book Now");
+  expect(headingElement).toBeInTheDocument();
 
 
-//   const reserveButton = screen.getByRole("button");
-//   fireEvent.click(reserveButton);
+  const reserveButton = screen.getByRole("button");
+  fireEvent.click(reserveButton);
 
-//   const headingElementNew = screen.getByText("Choose Date");
-//   expect(headingElementNew).toBeInTheDocument();
-// })
+  const headingElementNew = screen.getByText("Choose Date");
+  expect(headingElementNew).toBeInTheDocument();
+})
 
-// test('Initialize/Update Times', () => {
-//   render(<BrowserRouter><App /></BrowserRouter>);
-//   const reserveButton = screen.getByRole("button");
-//   fireEvent.click(reserveButton);
+test('Initialize/Update Times', () => {
+  render(<BrowserRouter><App /></BrowserRouter>);
+  const reserveButton = screen.getByRole("button");
+  fireEvent.click(reserveButton);
 
-//   const testTime = []
+  const testTime = []
 
-// })
+})
 
 
 describe('BookingForm', () => {
