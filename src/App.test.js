@@ -82,5 +82,29 @@ describe('BookingForm', () => {
   it('should show validation errors for invalid input', () => {
     // Similar to the previous test, but simulate invalid input
     // Assert that error messages are shown
+    const { getByLabelText, getByText, queryByText } = render(
+      <BookingForm submitForm={jest.fn()} />
+    );
+  
+    const dateInput = getByLabelText('Choose Date:');
+    const timeSelect = getByLabelText('Choose Time:');
+    const guestsInput = getByLabelText('Number of Guests:');
+    const occasionSelect = getByLabelText('Occasion:');
+    const submitButton = getByText('Make Your Reservation');
+  
+    // Simulate invalid input
+    fireEvent.change(dateInput, { target: { value: '' } }); // Empty date
+    fireEvent.change(timeSelect, { target: { value: '' } }); // Empty time
+    fireEvent.change(guestsInput, { target: { value: '0' } }); // Guests less than minimum
+    fireEvent.change(occasionSelect, { target: { value: '' } }); // Empty occasion
+  
+    // Submit the form
+    fireEvent.click(submitButton);
+  
+    // Assert error messages
+    expect(queryByText('Please choose a date.')).toBeInTheDocument();
+    expect(queryByText('Please choose a time.')).toBeInTheDocument();
+    expect(queryByText('Number of guests must be at least 1.')).toBeInTheDocument();
+    expect(queryByText('Please select an occasion.')).toBeInTheDocument();
   });
 });
