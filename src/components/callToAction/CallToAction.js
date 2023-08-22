@@ -1,8 +1,13 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import bruschetta from '../../assets/images/bruschetta.svg'
 
 function CallToAction() {
+  const navigate = useNavigate();
+
+  const handleReserveClick = () => {
+    navigate('/booking');
+  };
   return (
     <>
       <section className="hero-container">
@@ -18,7 +23,7 @@ function CallToAction() {
               in a lively but casual environment. The restaurant features
               a locally-sourced menu with daily specials.
             </div>
-            <button>
+            <button onClick={handleReserveClick}>
               Reserve a table
             </button>
           </div>

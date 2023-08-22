@@ -237,6 +237,11 @@ button{
 
 .order-delivery p{
   font-family: 'Karla', sans-serif;
+  padding: 0.3rem;
+  text-align: center;
+  background-color: rgb(244,206,20);
+  border-top-left-radius: 14px;
+  border-bottom-right-radius: 14px;
 }
 
 .order-delivery div img{

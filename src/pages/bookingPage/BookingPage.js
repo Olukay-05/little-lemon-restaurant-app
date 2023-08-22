@@ -1,30 +1,69 @@
-import React, { useState, useReducer } from 'react'
 
-import BookingForm from '../../components/form/BookingForm'
+import React, { useReducer, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
+import BookingForm from '../../components/form/BookingForm';
+
+
 
 function BookingPage() {
 
-  const [availableTimes, dispatch] = useReducer(updateTimesReducer, initializeTimes());
+  const seededRandom = seed => {
+    const m = 2 ** 35 - 31;
+    const a = 185852;
+    let s = seed % m;
+    return () => (s = (s * a) % m) / m;
+  };
 
-  // Create a function to update available times based on the selected date
-  function updateTimesReducer(state, action) {
-    if (action.type === 'UPDATE_TIMES') {
-      // Here you can implement logic to update available times based on the selected date
-      // For now, we'll return the same available times
-      return initializeTimes();
+  const fetchAPI = date => {
+    // ... your fetchAPI implementation here ...
+    
+  
+    let result = [];
+    let random = seededRandom(date.getDate());
+  
+    for (let i = 17; i <= 23; i++) {
+      if (random() < 0.5) {
+        result.push(i + ':00');
+      }
+      if (random() < 0.5) {
+        result.push(i + ':30');
+      }
     }
-    return state;
-  }
+  
+    return result;
+  };
 
-  // Create a function to initialize the available times
-  function initializeTimes() {
-    return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
-  }
-  return (
-    <div>
-      <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
-    </div>
-  )
+ 
+  const submitAPI = function(formData) {
+    return true;
+};
+
+const initialState = {availableTimes:  fetchAPI(new Date())}
+const [state, dispatch] = useReducer(updateTimes, initialState);
+
+function updateTimes(state, date) {
+    return {availableTimes: fetchAPI(new Date(date))}
 }
 
-export default BookingPage
+const navigate = useNavigate();
+
+function submitForm (formData) {
+  const savedFormData = localStorage.getItem('formData');
+
+    if (submitAPI(formData) && savedFormData) {
+        navigate("/confirmation");
+    }
+}
+
+useEffect(() => {
+  localStorage.setItem('formData', JSON.stringify(state.formData));
+}, [state.formData]);
+
+  return (
+    <div>
+      <BookingForm availableTimes={state} dispatch={dispatch} submitForm={submitForm}/>
+    </div>
+  );
+}
+
+export default BookingPage;
