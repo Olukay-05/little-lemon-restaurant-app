@@ -14,7 +14,7 @@ export default function Specials() {
             <div className="heading">
               <h3>This weekly specials!</h3>
               <button 
-                className="cta-button"
+                className="cta-button mobile"
                 aria-label="View Online Menu"
               >
                 Online Menu
@@ -42,10 +42,12 @@ export default function Specials() {
                   
 
                   <div className='order-delivery'>
+                
                     <p>Order a delivery</p>
                     <div>
                       <img src={deliveryIcon} alt="Delivery" />
                     </div>
+                  
                   </div>
                 </div>
               </div>
