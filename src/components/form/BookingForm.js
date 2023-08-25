@@ -94,7 +94,7 @@ const BookingForm = (props) => {
           <fieldset className="formField">
             <div>
               <label htmlFor="book-date">Choose Date:</label>
-              <input id="book-date" value={date} onChange={(e) => handleChange(e.target.value)} type="date" required/>
+              <input id="book-date" value={date} onChange={(e) => handleChange(e.target.value)} type="date"  min={new Date().toISOString().split('T')[0]} required/>
             </div>
             <div>
               <label htmlFor="book-time">Choose Time:</label>
